@@ -19,7 +19,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="app-background">
       <h1>Stock Grapher</h1>
       <SearchBox onSearch={handleSearch} />
       <StockData tickersymbol={searchQuery} />
