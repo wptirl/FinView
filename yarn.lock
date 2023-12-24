@@ -1667,6 +1667,11 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
+"@react-oauth/google@^0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@react-oauth/google/-/google-0.12.1.tgz#b76432c3a525e9afe076f787d2ded003fcc1bee9"
+  integrity sha512-qagsy22t+7UdkYAiT5ZhfM4StXi9PPNvw0zuwNmabrWyMKddczMtBIOARflbaIj+wHiQjnMAsZmzsUYuXeyoSg==
+
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz#04bc0608f4aa4b2e4b1aebf284344d0f68fda283"
@@ -2527,6 +2532,18 @@ adjust-sourcemap-loader@^4.0.0:
   dependencies:
     loader-utils "^2.0.0"
     regex-parser "^2.2.11"
+
+ag-charts-community@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/ag-charts-community/-/ag-charts-community-9.0.1.tgz#62e4c7b9ac56e19b63dfb87b10a550eeaaf15702"
+  integrity sha512-FZy1tAWO10TzRheoM622/vJWRqldAYH3VGreQ8qirt7FB/ctIR4kjY9GPZywDJnVcb/wET3nrgwq2vIiFKhKBw==
+
+ag-charts-react@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/ag-charts-react/-/ag-charts-react-9.0.1.tgz#88268cd3447381886186f99d0f4e708e46fcf248"
+  integrity sha512-EoTOygDt8ElgkMipLRr6Z3P+00PvqWsyaF2MY0rnAYCEGIHhhzJsoeWcPao+WnJ/RykiJRH0xd5DoxbNMWybFQ==
+  dependencies:
+    prop-types "^15.6.2"
 
 agent-base@6:
   version "6.0.2"
@@ -7920,7 +7937,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.8.1:
+prop-types@^15.6.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==

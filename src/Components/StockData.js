@@ -13,6 +13,7 @@ const StockData = ({ tickersymbol }) => {
   const fetchData = async () => {
     setLoading(true);
     try {
+
       const myCookieExists = doesCookieExist(tickersymbol);
       if (myCookieExists) {
         // Execute your code here if the cookie exists
@@ -26,14 +27,32 @@ const StockData = ({ tickersymbol }) => {
         console.log('The cookie does not exist. ', tickersymbol);
         const apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_${interval.toUpperCase()}&symbol=${tickersymbol}&apikey=${apiKey}`;
         console.log(apiUrl);
+        fetch('http://localhost:3001/add-stock-ticker', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ ticker: 'AAPL' }),
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+
+
         const response = await fetch(apiUrl);
         const data = await response.json();
 
          // Alpha Vantage organizes data by date, so you can access it easily.
-
          setStockData(data['Time Series (Daily)']); // Adjust the key if using a different interval.
          Cookies.set(tickersymbol, JSON.stringify(data), { expires: 7, path: '' });
-         console.log('Created the cookie.');
+
+         // check to make sure the cookie was actually created. Otherwise use local storage.
+         if (doesCookieExist(tickersymbol)){
+            console.log('yo that shit failed.')
+
+         } else{
+            localStorage.setItem(tickersymbol, 'value');
+         }
       }
       setLoading(false);
 

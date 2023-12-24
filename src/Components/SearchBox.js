@@ -14,7 +14,7 @@ const SearchBox = ({ onSearch }) => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh' }}>
       <input
         type="text"
         placeholder="Search..."

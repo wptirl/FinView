@@ -29,10 +29,18 @@
 }
 
 .app-background {
-  background-image: url('../public/floral-background.png');
-  background-repeat: repeat;
+  background-color:  rgb(252, 251, 249);
   min-height: 100vh;
   min-width: 100vw;
+}
+
+.google-login-container .abcRioButton {
+  width: 25% !important;
+}
+
+.fifty-percent-div {
+    width: '50%';
+    padding: '10px';
 }
 
 @keyframes App-logo-spin {
